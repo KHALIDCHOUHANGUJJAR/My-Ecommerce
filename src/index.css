@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html, body {
+  position: relative;
+  overflow-x: hidden; 
+  margin: 0;
+  padding: 0;
+  height: 100%; 
+}
+
+body {
+  scroll-behavior: smooth; 
+}
+
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.loader {
+  width: 60px;
+  aspect-ratio: 4;
+  background: radial-gradient(circle closest-side, #d1c7c7 90%, #807b7b00) 0 /
+    calc(100% / 3) 100% space;
+  clip-path: inset(0 100% 0 0);
+  animation: l1 1s steps(4) infinite;
+}
+@keyframes l1 {
+  to {
+    clip-path: inset(0 -34% 0 0);
+  }
+}
+@media (max-width: 500px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .sideimage {
+    width: 90vw;
+    height: 50vh;
+    object-fit: inherit;
+  }
+  .siderbar {
+    width: 100%;
+  }
+  .timer {
+    width: 50px;
+    font-size: small; 
+  }
+  .hd{
+display: none;
+  }
+}
