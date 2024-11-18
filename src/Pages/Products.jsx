@@ -16,8 +16,10 @@ const Products = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (data) {
+    if (data && data.length > 0) {
       setLoading(false);
+    } else {
+      setLoading(true);
     }
   }, [data]);
 

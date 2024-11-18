@@ -97,16 +97,16 @@ export const pro3 = [
   {
     pragraph: "Free Delivery for all order over $140",
     name: "Free and Fast Delivery",
-    image: "/public/Assets/Images/Services.png",
+    image: "/Assets/Images/Services.png",
   },
   {
     pragraph: "Friendly 24/7 coustomer support",
     name: "24/7 CUSTOMER SERVICE",
-    image: "/public/Assets/Images/Services (1).png",
+    image: "/Assets/Images/Services (1).png",
   },
   {
     pragraph: "We are return money within 30 days",
     name: "MONEY BACK GURANTEE",
-    image: "/public/Assets/Images/Services (2).png",
+    image: "/Assets/Images/Services (2).png",
   },
 ];

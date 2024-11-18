@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 
-
 import { useContext, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { NavLink, useNavigate } from "react-router-dom";
@@ -25,7 +24,6 @@ const AuthForm = ({ formType }) => {
   const { setUser } = useContext(UserContext);
 
   useEffect(() => {
-
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         navigate("/dashboard");
