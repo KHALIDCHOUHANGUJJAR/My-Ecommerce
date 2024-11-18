@@ -50,7 +50,7 @@ const ProductSlider = ({ HidePro, hideProSec }) => {
               >
                 <div className="relative bg-white border-4 rounded-md shadow-md h-64 w-full md:w-[20vw] p-10">
                   <img
-                    src={items.img}
+                    src={items.image}
                     alt={items.name}
                     className="h-32 w-full object-contain"
                   />
@@ -80,7 +80,7 @@ const ProductSlider = ({ HidePro, hideProSec }) => {
                   -40%
                 </div>
                 <img
-                  src={items.img}
+                  src={items.image}
                   alt={items.name}
                   className="h-32 w-full object-contain"
                 />

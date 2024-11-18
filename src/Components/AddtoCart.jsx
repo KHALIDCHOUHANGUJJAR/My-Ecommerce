@@ -31,7 +31,7 @@ export function AddtoCart() {
               <Card.Img
                 variant="top"
                 src={
-                  item.image || item.img || "https://via.placeholder.com/150"
+                  item.img || item.image || "https://via.placeholder.com/150"
                 }
                 alt={item.title}
                 className="h-[200px] object-cover"
@@ -39,7 +39,7 @@ export function AddtoCart() {
               <Card.Body>
                 <Card.Title>{item.title}</Card.Title>
                 <Card.Text>
-                  <strong>Price:</strong> ${item.price || item.price} <br />
+                  <strong>Price:</strong> ${item.Price || item.price} <br />
                   <strong>Category:</strong> {item.category} <br />
                   <strong>Quantity:</strong> {item.quantity} <br />
                   <strong>Rating:</strong> {item.rating?.rate} ★ (

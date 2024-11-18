@@ -210,7 +210,7 @@ const Header = () => {
                   className="p-2 flex items-center gap-2 text-gray-700"
                 >
                   {" "}
-                  <span className="absolute  bg-red-500 text-white text-xs rounded-full px-1 py-0 bottom-[38%]">
+                  <span className="absolute  bg-red-500 text-white text-xs rounded-full px-0 py-0 bottom-[38%]">
                     {cartItems.length}
                   </span>
                   <FontAwesomeIcon icon={faCartShopping} /> My Cart

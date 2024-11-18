@@ -54,14 +54,14 @@ const LandingPages = ({ HideType, hideBtn, HidePro, isDisplay, userDis }) => {
 
       <div className="grid grid-cols-2 m-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 items-center justify-center">
         {Category.map((item, index) => {
-          const { name, img } = item;
+          const { name, image } = item;
           return (
             <div
               key={index}
               className={`flex h-[15vh] w-[40vw] sm:h-[20vh] md:h-[25vh] sm:w-[30vw] md:w-[13vw] items-center justify-center flex-col border-4 rounded mb-16 
                 ${index === 3 ? "bg-red-500" : "hover:bg-red-500"}`}
             >
-              <img src={img} alt={name} className="w-[15vw] md:w-[6vw]" />
+              <img src={image} alt={name} className="w-[15vw] md:w-[6vw]" />
               <h1
                 className={`font-bold ${
                   index === 3 ? "text-white" : "hover:text-white"

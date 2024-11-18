@@ -1,30 +1,44 @@
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import { UserContext } from "../Context/Context";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row,  } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../Store/Action";
 import { toast } from "react-toastify";
-
+import { LoadingOutlined } from "@ant-design/icons";
+import { Spin } from "antd";
 const Products = () => {
   const { data } = useContext(UserContext);
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (data) {
+      setLoading(false);
+    }
+  }, [data]);
+
   const handleCart = (item) => {
     try {
       dispatch(addToCart(item));
-      console.log(item);
-      toast.success(" Added To Cart");
+      toast.success("Added To Cart");
     } catch (error) {
       toast.error(error.message);
     }
   };
+
   return (
     <Container>
       <Row className="g-4">
-        {data &&
+        {loading ? (
+          <Spin
+            indicator={<LoadingOutlined style={{ fontSize: 100 }} spin />}
+          />
+        ) : (
+          data &&
           data.map((items, index) => (
             <Col key={index} xs={12} sm={6} md={4} lg={3}>
               <div className="p-4 cursor-pointer">
@@ -66,7 +80,8 @@ const Products = () => {
                 </div>
               </div>
             </Col>
-          ))}
+          ))
+        )}
       </Row>
     </Container>
   );

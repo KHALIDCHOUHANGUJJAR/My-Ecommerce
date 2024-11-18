@@ -16,7 +16,7 @@ export function ProModal({ modal, setModal, selectProducts }) {
   return (
     <Modal show={modal} onHide={handleClose} size="lg" centered>
       <Modal.Header closeButton>
-        <Modal.Title>{selectProducts?.name || `"Product Details"`}</Modal.Title>
+        <Modal.Title>{selectProducts?.name || "Product Details"}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         {selectProducts ? (

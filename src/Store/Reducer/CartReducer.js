@@ -7,6 +7,7 @@ export const cartReducer = (state = initialValue, { type, payload }) => {
   switch (type) {
     case "ADD":
       const existingItem = state.cart.find((item) => item.id === payload.id);
+
       if (existingItem) {
         return {
           ...state,
@@ -43,3 +44,5 @@ export const cartReducer = (state = initialValue, { type, payload }) => {
       return state;
   }
 };
+
+// to calculate all price in the add to cart
