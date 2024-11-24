@@ -87,7 +87,7 @@ const LandingPages = ({ HideType, hideBtn, HidePro, isDisplay, userDis }) => {
         <div className="w-full flex items-center flex-col justify-center gap-8">
           <div className="flex flex-col items-center justify-center">
             <img
-              src="/public/Assets/Images/Frame 739.png"
+              src="/Assets/Images/Frame 739.png"
               alt="Category Banner"
               className="w-full max-w-[90vw] md:max-w-full"
             />
