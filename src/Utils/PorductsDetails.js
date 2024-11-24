@@ -53,7 +53,7 @@ export const Category = [
   },
   {
     name: "SmartWatch",
-    image: "/Assets/Images/Category-smartWatch.png",
+    image: "/Assets/Images/Category-SmartWatch.png",
   },
   {
     name: "Camera",
@@ -61,7 +61,7 @@ export const Category = [
   },
   {
     name: "HeadPhones",
-    image: "/Assets/Images/Category-HeadPhone.png",
+    image: "/Assets/Images/Category-Headphone.png",
   },
   {
     name: "Gaming",
@@ -91,7 +91,6 @@ export const BestProducts = [
     Price: "$1099",
   },
 ];
-
 
 export const pro3 = [
   {
