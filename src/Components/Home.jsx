@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -26,7 +25,7 @@ function Home() {
           </div>
           <div className="relative">
             <img
-              src="/public/Assets/images/3a818301-b0e3-49c6-bd3b-c981793d467f_PK-1976-688.jpg_2200x2200q80.jpg_.webp"
+              src="/Assets/images/3a818301-b0e3-49c6-bd3b-c981793d467f_PK-1976-688.jpg_2200x2200q80.jpg_.webp"
               alt="Slide 2"
               className="sideimage w-full h-[70vh]  object-contain"
             />

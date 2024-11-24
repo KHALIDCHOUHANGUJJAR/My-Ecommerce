@@ -100,7 +100,7 @@ const LandingPages = ({ HideType, hideBtn, HidePro, isDisplay, userDis }) => {
                 className="flex items-center flex-col gap-4 max-w-[90vw] md:max-w-none"
               >
                 <img
-                  src={item.img}
+                  src={item.image}
                   alt={item.name}
                   className="w-[40vw] md:w-auto"
                 />

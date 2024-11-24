@@ -4,10 +4,10 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../Store/Action";
 import { toast } from "react-toastify";
 
-
 export function ProModal({ modal, setModal, selectProducts }) {
   const dispatch = useDispatch();
   const handleClose = () => setModal(false);
+  
   const handleAddToCart = (item) => {
     dispatch(addToCart(item));
     toast.success("Added to cart");
@@ -62,7 +62,6 @@ export function ProModal({ modal, setModal, selectProducts }) {
                   window.open(whatsappURL, "_blank");
                 }}
               >
-              
                 Order Now
               </Button>
 

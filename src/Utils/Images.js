@@ -9,31 +9,31 @@ export const AbouteImage = [
 ];
 export const AboutCard1 = [
   {
-    imageUrl: "/public/Assets/images/Frame 701.png",
+    imageUrl: "/Assets/Images/Frame 701.png",
   },
   {
-    imageUrl: "/public/Assets/images/Frame 704.png",
+    imageUrl: "/Assets/Images/Frame 704.png",
   },
   {
-    imageUrl: "/public/Assets/images/Frame 702.png",
+    imageUrl: "/Assets/Images/Frame 702.png",
   },
   {
-    imageUrl: "/public/Assets/images/Frame 703.png",
+    imageUrl: "/Assets/Images/Frame 703.png",
   },
 ];
 export const AboutCard2 = [
   {
-    imageUrl: "/public/Assets/images/Frame 874.png",
+    imageUrl: "/Assets/Images/Frame 874.png",
     name: "Tom Cruise",
     Positon: "Founder & Chairman",
   },
   {
-    imageUrl: "/public/Assets/images/Frame 875.png",
+    imageUrl: "/Assets/Images/Frame 875.png",
     name: "Emma Waston",
     Positon: "Managing Director",
   },
   {
-    imageUrl: "/public/Assets/images/Frame 876.png",
+    imageUrl: "/Assets/Images/Frame 876.png",
     name: "Will Smith",
     Positon: "Product Designer",
   },

@@ -74,7 +74,7 @@ export function AddtoCart() {
         </>
       ) : (
         <div className="flex items-center justify-center p-11 text-center text-gray-600">
-          <Empty description="No items in the cart" className="text-3xl" />
+          <Empty description="No Items Are Added To Cart" className="text-3xl" />
         </div>
       )}
     </div>
