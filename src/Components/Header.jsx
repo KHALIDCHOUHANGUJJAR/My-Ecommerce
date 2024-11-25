@@ -38,7 +38,6 @@ const Header = () => {
   const [modal, setModal] = useState(false);
   const [selectProducts, setSelectedProduct] = useState(null);
 
-
   const handlecat = (cat) => {
     const filteredCat = data.filter((item) => item.category === cat);
     setCategories(filteredCat);
