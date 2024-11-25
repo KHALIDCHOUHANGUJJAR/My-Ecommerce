@@ -8,15 +8,19 @@ export function ProModal({ modal, setModal, selectProducts }) {
   const dispatch = useDispatch();
   const handleClose = () => setModal(false);
   
-  const handleAddToCart = (item) => {
-    dispatch(addToCart(item));
-    toast.success("Added to cart");
+  const handleCart = (item) => {
+    try {
+      dispatch(addToCart(item));
+      toast.success("Added To Cart");
+    } catch (error) {
+      toast.error(error.message);
+    }
   };
 
   return (
     <Modal show={modal} onHide={handleClose} size="lg" centered>
       <Modal.Header closeButton>
-        <Modal.Title>{selectProducts?.name || "Product Details"}</Modal.Title>
+        <Modal.Title>{selectProducts?.name || selectProducts?.title || "Product Details"}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         {selectProducts ? (
@@ -68,8 +72,8 @@ export function ProModal({ modal, setModal, selectProducts }) {
               <Button
                 variant="primary"
                 className="mt-4 w-full font-bold btn-secondary"
-                onClick={handleAddToCart}
-              >
+                onClick={() => handleCart(selectProducts)}
+                >
                 Add to Cart
               </Button>
             </div>

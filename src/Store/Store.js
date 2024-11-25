@@ -5,9 +5,13 @@ import { persistStore, persistReducer } from "redux-persist";
 
 const persistConfig = {
   key: "root",
-  storage,
+  storage,    
 };
+
 const persistedReducer = persistReducer(persistConfig, cartReducer);
-let store = createStore(persistedReducer);
-let persistor = persistStore(store);
+
+const store = createStore(persistedReducer);
+
+const persistor = persistStore(store);
+
 export { store, persistor };

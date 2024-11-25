@@ -36,8 +36,8 @@ const Header = () => {
   const [search, setSearch] = useState("");
   const [isFound, setFound] = useState("");
   const [modal, setModal] = useState(false);
+  const [selectProducts, setSelectedProduct] = useState(null);
 
-  const [selectedProduct, setSelectedProduct] = useState(null);
 
   const handlecat = (cat) => {
     const filteredCat = data.filter((item) => item.category === cat);
@@ -259,7 +259,7 @@ const Header = () => {
         </Navbar>
       ))}
 
-      <ProModal modal={modal} setModal={setModal} chosepro={selectedProduct} />
+      <ProModal modal={modal} setModal={setModal} chosepro={selectProducts``} />
     </>
   );
 };

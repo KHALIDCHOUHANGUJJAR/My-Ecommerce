@@ -15,7 +15,7 @@ export function AddtoCart() {
   };
 
   const totalAmount = cartItems.reduce(
-    (acc, current) => acc + (current.Price || current.price || 0),
+    (acc, current) => acc + (Number(current.price || current.Price) || 0),
     0
   );
 
@@ -67,14 +67,19 @@ export function AddtoCart() {
           </div>
           <div className="mt-6 text-center">
             <h3 className="text-xl font-semibold text-gray-700">
-              Total Amount:{" "}
+              Total Amount:
+
               <span className="text-green-600">${totalAmount.toFixed(2)}</span>
+
             </h3>
           </div>
         </>
       ) : (
         <div className="flex items-center justify-center p-11 text-center text-gray-600">
-          <Empty description="No Items Are Added To Cart" className="text-3xl" />
+          <Empty
+            description="No Items Are Added To Cart"
+            className="text-3xl"
+          />
         </div>
       )}
     </div>

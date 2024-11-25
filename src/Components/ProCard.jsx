@@ -15,7 +15,7 @@ const ProCard = ({ HideType }) => {
   const navigate = useNavigate();
   const { data } = useContext(UserContext);
   const [modal, setModal] = useState(false);
-  const [selectedPro, setSelectedPro] = useState({});
+  const [selectProducts, setSelectedPro] = useState({});
   const [loading, setLoading] = useState(true);
 
   const viewModal = (pro) => {
@@ -38,7 +38,6 @@ const ProCard = ({ HideType }) => {
         Heading={"Our Products"}
         text={"Explore Our Products"}
       />
-
       <div className="flex items-center justify-center">
         <Container className="flex flex-col items-center">
           <Row gutter={[16, 16]}>
@@ -57,19 +56,17 @@ const ProCard = ({ HideType }) => {
                   lg={6}
                   xl={6}
                   className="cursor-pointer"
+                  onClick={() => viewModal(item)}
                 >
                   <div className="p-4">
-                    <div
-                      className="relative bg-white border rounded-md shadow-md h-60 p-4"
-                      onClick={() => viewModal(item)}
-                    >
+                    <div className="relative bg-white border rounded-md shadow-md h-60 p-4">
                       <div className="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded">
                         -40%
                       </div>
 
                       <img
                         src={item.image}
-                        alt={item.name}
+                        alt={item.title}
                         className="h-32 w-full object-contain"
                       />
 
@@ -109,8 +106,11 @@ const ProCard = ({ HideType }) => {
           />
         </Container>
       </div>
-
-      <ProModal modal={modal} setModal={setModal} chosepro={selectedPro} />
+      <ProModal
+        modal={modal}
+        setModal={setModal}
+        selectProducts={selectProducts}
+      />{" "}
     </div>
   );
 };
